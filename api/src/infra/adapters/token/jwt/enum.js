@@ -1,5 +1,5 @@
 exports.ENUM = {
-  BCRYPT_HASH: 10,
-  JWT_SECRET: '26ba80198a19c222cd723d0d2c324dfa',
-  JWT_TIME: '1d'
+  BCRYPT_HASH: process.env.BCRYPT_HASH,
+  JWT_SECRET: process.env.JWT_SECRET,
+  JWT_TIME: process.env.JWT_TIME
 }
