@@ -1,0 +1,35 @@
+{
+  "name": "safe-password-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha  --config=.mocharc.json",
+    "test:coverage": "nyc  npm run test",
+    "test:watch": "mocha 'test/**/*.spec.js' --recursive --watch  --timeout 60000 --exit",
+    "dev": "nodemon --inspect=4321 ./src/main/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.9",
+    "mongoose": "^5.12.14",
+    "mysql2": "^2.2.5"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "eslint": "^7.27.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "mocha": "^8.4.0",
+    "nodemon": "^2.0.7",
+    "nyc": "^15.1.0",
+    "sinon": "^11.1.1"
+  }
+}

@@ -1,0 +1,70 @@
+.containergrid {
+  display: grid;
+  grid-area: "header" "subheader" "conteudo" "rodape";
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 5% 10% 75% 10%;
+  height: calc(100vh - 50px);
+}
+
+.header {
+  grid-area: header;
+}
+
+.subheader {
+  padding-left: 1.5rem;
+  grid-area: subheader;
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.title {
+  color: #333;
+  font-size: 2rem;
+  width: 60%;
+  font-weight: 500;
+  border-bottom: 1px solid #333;
+  padding-top: 3rem;
+}
+
+.sidenav {
+  grid-area: conteudo;
+  grid-column: 1 / 1;
+}
+
+.conteudo {
+  grid-area: conteudo;
+  grid-column: 2 / 2;
+  grid-row: 3 / 3;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.test {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  display: flex;
+  padding-top: 20px;
+}
+
+
+@media screen and (max-width: 920px) {
+  .subheader {
+    grid-column: 1 / 3;
+    grid-row: 2 / 2;
+  }
+
+  .conteudo {
+    padding-top: 15%;
+    grid-column: 1 / 3;
+    grid-row: 3 / 3;
+  }
+
+  .header button {
+    visibility: visible;
+  }
+}
